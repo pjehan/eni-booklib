@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booklib{% endblock %}
+
+{% block body %}
+
+    <section>
+        {% for book in books %}
+            <article>
+                <img src="{{ asset('uploads/' ~ book.image) }}" alt="{{ book.title }}">
+                <h2>{{ book.title }}</h2>
+            </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}

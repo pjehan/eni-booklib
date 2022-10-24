@@ -57,64 +57,27 @@
             <div class="col-md-8 last-books">
                 <h2>Les derniers livres</h2>
                 <div class="row flex-grow-1">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card">
-                            <img class="card-img-top" src="uploads/hpelcdf.jpg" alt="Harry Potter et la coupe de feu">
-                            <div class="card-body">
-                                <h3>Harry Potter et la coupe de feu</h3>
-                                <div class="book-infos">
-                                    <span class="label label-info"><i class="fa fa-user"></i> J.K. Rowling</span>
-                                    <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
-                                    <span class="label label-success"><i class="fa fa-tag"></i> Fantastique</span>
+
+                    {% for book in books %}
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="{{ asset('uploads/' ~ book.image) }}" alt="{{ book.title }}">
+                                <div class="card-body">
+                                    <h3>{{ book.title }}</h3>
+                                    <!--
+                                    <div class="book-infos">
+                                        <span class="label label-info"><i class="fa fa-user"></i> J.K. Rowling</span>
+                                        <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
+                                        <span class="label label-success"><i class="fa fa-tag"></i> Fantastique</span>
+                                    </div>
+                                    <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
+                                    </p>
+                                    -->
                                 </div>
-                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
-                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card">
-                            <img class="card-img-top" src="uploads/aec.jpg" alt="Asterix et Cléopâtre">
-                            <div class="card-body">
-                                <h3>Asterix et Cléopâtre</h3>
-                                <div class="book-infos">
-                                    <span class="label label-info"><i class="fa fa-user"></i> René Goscinny</span>
-                                    <span class="label label-success"><i class="fa fa-tag"></i> Bande dessinée</span>
-                                </div>
-                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card">
-                            <img class="card-img-top" src="uploads/mb.jpg" alt="Madame Bovary">
-                            <div class="card-body">
-                                <h3>Madame Bovary</h3>
-                                <div class="book-infos">
-                                    <span class="label label-info"><i class="fa fa-user"></i> Gustave Flaubert</span>
-                                    <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
-                                </div>
-                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card">
-                            <img class="card-img-top" src="uploads/hpalds.jpg" alt="Harry Potter à l'école des sorciers">
-                            <div class="card-body">
-                                <h3>Harry Potter à l'école des sorciers</h3>
-                                <div class="book-infos">
-                                    <span class="label label-info"><i class="fa fa-user"></i> J.K. Rowling</span>
-                                    <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
-                                    <span class="label label-success"><i class="fa fa-tag"></i> Fantastique</span>
-                                </div>
-                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+
                 </div>
             </div>
 

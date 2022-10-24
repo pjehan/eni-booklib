@@ -4,13 +4,185 @@
 
 {% block body %}
 
-    <section>
-        {% for book in books %}
-            <article>
-                <img src="{{ asset('uploads/' ~ book.image) }}" alt="{{ book.title }}">
-                <h2>{{ book.title }}</h2>
-            </article>
-        {% endfor %}
+    <section class="header-home">
+        <div class="container">
+            <div class="jumbotron">
+
+                <h1>La plateforme n°1 des lecteurs !</h1>
+
+                <p>Booklib est une plateforme vous permettant de visualiser les livres disponibles dans les boîtes à
+                    livres autour de chez vous.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum.</p>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="panel-title text-center">Rechercher un livre</h2>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-inline flex-row justify-content-center">
+                            <div class="form-group mr-sm-2">
+                                <label class="sr-only" for="inputTitle">Titre</label>
+                                <input type="text" class="form-control" id="inputTitle" placeholder="Titre">
+                            </div>
+                            <div class="form-group mr-sm-2">
+                                <label class="sr-only" for="selectCategory">Email</label>
+                                <select class="form-control" id="selectCategory">
+                                    <option disabled selected>Toutes les catégories</option>
+                                    <option>Roman</option>
+                                    <option>SF</option>
+                                    <option>Histoire</option>
+                                    <option>Thriller</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-default">
+                                <i class="fa fa-search"></i>
+                                Rechercher
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+
+        <div class="row">
+
+            <div class="col-md-8 last-books">
+                <h2>Les derniers livres</h2>
+                <div class="row flex-grow-1">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="uploads/hpelcdf.jpg" alt="Harry Potter et la coupe de feu">
+                            <div class="card-body">
+                                <h3>Harry Potter et la coupe de feu</h3>
+                                <div class="book-infos">
+                                    <span class="label label-info"><i class="fa fa-user"></i> J.K. Rowling</span>
+                                    <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
+                                    <span class="label label-success"><i class="fa fa-tag"></i> Fantastique</span>
+                                </div>
+                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="uploads/aec.jpg" alt="Asterix et Cléopâtre">
+                            <div class="card-body">
+                                <h3>Asterix et Cléopâtre</h3>
+                                <div class="book-infos">
+                                    <span class="label label-info"><i class="fa fa-user"></i> René Goscinny</span>
+                                    <span class="label label-success"><i class="fa fa-tag"></i> Bande dessinée</span>
+                                </div>
+                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="uploads/mb.jpg" alt="Madame Bovary">
+                            <div class="card-body">
+                                <h3>Madame Bovary</h3>
+                                <div class="book-infos">
+                                    <span class="label label-info"><i class="fa fa-user"></i> Gustave Flaubert</span>
+                                    <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
+                                </div>
+                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="uploads/hpalds.jpg" alt="Harry Potter à l'école des sorciers">
+                            <div class="card-body">
+                                <h3>Harry Potter à l'école des sorciers</h3>
+                                <div class="book-infos">
+                                    <span class="label label-info"><i class="fa fa-user"></i> J.K. Rowling</span>
+                                    <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
+                                    <span class="label label-success"><i class="fa fa-tag"></i> Fantastique</span>
+                                </div>
+                                <p><a href="#" class="btn btn-primary" role="button"><i class="fa fa-eye"></i> Voir plus</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="panel-title">Top villes</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">125 livres</span>
+                                Nantes
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">113 livres</span>
+                                Rennes
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">92 livres</span>
+                                Angers
+                            </a>
+                        </div>
+                        <a class="btn btn-primary btn-block" href="#"><i class="fa fa-map"></i> Voir toutes les villes</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="panel-title">Top utilisateurs</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">223 échanges</span>
+                                Guillaume C.
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">187 échanges</span>
+                                Florian C.
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">155 échanges</span>
+                                Emilie D.
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">152 échanges</span>
+                                Bastien B.
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="badge badge-dark">150 échanges</span>
+                                Kevin C.
+                            </a>
+                        </div>
+                        <a class="btn btn-primary btn-block" href="#"><i class="fa fa-users"></i> Voir tous les utilisateurs</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container">
+
+        <h2>Rechercher une boîte à livre</h2>
+
+        <div id="map-books"></div>
+
     </section>
 
 {% endblock %}

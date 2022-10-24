@@ -21,6 +21,14 @@ class BookController extends AbstractController
         ]);
     }
 
+    #[Route('/{id}', name: 'book_show', requirements: ['id' => '\d+'])]
+    public function show(Book $book): Response
+    {
+        return $this->render('book/show.html.twig', [
+            'book' => $book
+        ]);
+    }
+
     #[Route('/create', name: 'book_create', methods: ['GET', 'POST'])]
     public function create(Request $request, BookRepository $bookRepository)
     {

@@ -40,7 +40,7 @@ class BookController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $bookRepository->save($book, true);
 
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('book_show', ['id' => $book->getId()]);
         }
 
         return $this->renderForm('book/create.html.twig', [

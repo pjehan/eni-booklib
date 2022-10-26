@@ -64,13 +64,18 @@
                                 <img class="card-img-top" src="{{ asset('uploads/' ~ book.image) }}" alt="{{ book.title }}">
                                 <div class="card-body">
                                     <h3>{{ book.title }}</h3>
-                                    <!--
                                     <div class="book-infos">
-                                        <span class="label label-info"><i class="fa fa-user"></i> J.K. Rowling</span>
-                                        <span class="label label-success"><i class="fa fa-tag"></i> Roman</span>
-                                        <span class="label label-success"><i class="fa fa-tag"></i> Fantastique</span>
+                                        <span class="label label-info">
+                                            <i class="fa fa-user"></i>
+                                            {{ book.author.fullName }}
+                                        </span>
+                                        {% for category in book.categories %}
+                                            <span class="label label-success">
+                                                <i class="fa fa-tag"></i>
+                                                {{ category.name }}
+                                            </span>
+                                        {% endfor %}
                                     </div>
-                                    -->
                                     <p>
                                         <a href="{{ path('book_show', {'id': book.id}) }}" class="btn btn-primary" role="button">
                                             <i class="fa fa-eye"></i>

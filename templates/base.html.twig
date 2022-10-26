@@ -38,12 +38,7 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                aria-expanded="false">Catégories <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Roman</a></li>
-                                <li><a class="dropdown-item" href="#">SF</a></li>
-                                <li><a class="dropdown-item" href="#">Histoire</a></li>
-                                <li><a class="dropdown-item" href="#">Thriller</a></li>
-                            </ul>
+                            {{ render(controller('App\\Controller\\CategoryController::dropdown')) }}
                         </li>
                     </ul>
                     <ul class="navbar-nav">
